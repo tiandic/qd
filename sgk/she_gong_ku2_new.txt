@@ -1,0 +1,26 @@
+%!:-)!%/menu:
+    度娘:	 按钮签到		%:-)%@baidusell_bot
+
+%!:-)!%/sign
+    局子社:     				%:-)%mqsgK_bot 局子
+    无名社:	        			%:-)%@wmsgk1_bot
+    情报局:	        			%:-)%@qbjSGKxuanwubot
+
+%!:-)!%/qd
+    Botnet:	        				%:-)%SGK_0001_bot
+    清风:	        				%:-)%qingfeng888bot
+    清风(sgk):          			%:-)%@Weifeng007_bot
+
+%!:-)!%/checkin
+    ingeek:			            	%:-)%@ingeeksgkbot
+    银联:	            			%:-)%@unionpaysgkbot
+    无名DDOS:           			%:-)%new_wm_ddos_bot
+
+%!:-)!%按钮签到
+    哈希:	            			%:-)%@AnonymousSGKbot 哈希
+
+
+%!:-)!%/signin
+数据SGK: 	    	            	%:-)%@datasgk_bot
+屁屁:	                			%:-)%@ppsgk_bot
+Query:	    	    	        	%:-)%@chadangbbot

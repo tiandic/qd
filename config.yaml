@@ -1,0 +1,49 @@
+# 建议使用""包裹字符串,便于查看
+# 关于路径部分:如果路径的文件夹部分加入了环境变量中,那么路径的文件夹部分可以省略
+qd:
+  global:
+    # 暂停键
+    pause_key: "esc"
+  launcher:      
+    # 安卓模拟器的路径
+    # 选填(填不填都一样,历史遗留问题)
+    android_emulator_path: "C:/Users/adminmaster/Desktop/逍遥模拟器2.lnk" ###
+    # adb的路径
+    adb_path: "adb" ###
+    # 指定特定的安卓模拟器
+    # 例如 "-s 127.0.0.1:21503"
+    # 选填
+    Android_device: ""
+
+    # 是否启用各个签到功能(不要改变顺序!!!)
+    sign_in_features_enabled:
+      telegram:   True ###
+      # 米游社
+      mi_you_she: True ###
+      # 云原神(或其他打开浏览器签到的)
+      cloud:      True ###
+      # 逗逗AI
+      DouDou:     True ###
+      # 原神启动
+      yuanshen:   True ###
+
+  sgk:
+    # 开始时默认是否暂停
+    paused:   False
+    # 是否需要等待一定时间再开始
+    if_sleep: True
+    # 开始时候等待telegram启动完毕的时间秒数
+    start_sleep_second: 5
+  yuanshen:
+    exe_path:  "C:/Users/adminmaster/Desktop/原神.lnk"
+    user_name: "2323748675@qq.com"
+    password:  "-Sy?k-}?#0l2JZV"
+  cloud:
+    # chrome路径(或者其他支持命令行打开url的浏览器路径)
+    browser_dir_path: "C:\\Program Files\\Google\\Chrome\\Application" ###
+    # 浏览器名称(必须带上".exe"后缀!)
+    browser_name: "chrome.exe" ###
+    # 等待多少秒后结束浏览器的进程
+    sleep_second_finsh_cloud: 60
+    # 云原神网址(或者其他一打开就完成签到的路径)(每天一次)
+    cloud_url: "https://ys.mihoyo.com/cloud/#/"
