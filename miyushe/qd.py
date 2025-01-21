@@ -1,7 +1,7 @@
 '''
 encode: utf-8
 Date: 2024-08-20 19:06:20
-LastEditTime: 2025-01-20 14:12:58
+LastEditTime: 2025-01-21 09:20:25
 FilePath: /qd/miyushe/qd.py
 '''
 '''
@@ -119,7 +119,7 @@ def main(if_skip=False,no_check_update=False,no_miyushe_sleep=False,zoom=False):
         while temp>0:
             out_print=f"sleeping...{temp}s"
             out_print = out_print.ljust(14)
-            print(out_print,end="")
+            print(out_print)
             # 将光标移动回行首
             print("\033[F",end="")
             event.wait(1)
@@ -185,9 +185,11 @@ def main(if_skip=False,no_check_update=False,no_miyushe_sleep=False,zoom=False):
         event.wait(2)
         # 点击红点(即可以领取的物品位置)
         shangyige_and_click("hongd.png",2)
-        # 有时候会弹出一个以后要不要通知签到福利的窗口,点击一下"不用了"
-        shangyige_and_click("hd_buyongle.png",2,click_func_type=1)
-
+        try:
+            # 有时候会弹出一个以后要不要通知签到福利的窗口,点击一下"不用了"
+            shangyige_and_click("hd_buyongle.png",2,click_func_type=1)
+        except Exception:
+            tool.logger_click_image.debug("shangyige_and_click(\"hd_buyongle.png\",2,click_func_type=1)",exc_info=True)
         # 点击退出签到福利
         shangyige_and_click("x.png",2)
 
@@ -302,16 +304,18 @@ def main(if_skip=False,no_check_update=False,no_miyushe_sleep=False,zoom=False):
             # 如果遇到分享错误,可能是点击到视频了
             if is_fenx_error:
                 shangyige_and_click("Android_tui.png",2)
+                pyautogui.moveTo(tool.get_active_window_position())
                 
             # 错误次数(太久没有点到赞,可能是点到的视频里面)
             # 错误次数太多
             if error_count>5:
                 shangyige_and_click("Android_tui.png",2)
                 pyautogui.moveTo(tool.get_active_window_position())
+            pyautogui.scroll(-2)
             if error_count>10:
                 tool.logger.warning("点赞失败")
                 break                
-            pyautogui.scroll(-2)
+            # pyautogui.scroll(-2)
             event.wait(4)
              
 
